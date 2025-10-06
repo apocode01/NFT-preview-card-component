@@ -23,6 +23,7 @@ body {
     min-height: 100vh;
     font-family: 'Outfit', sans-serif;
     background-color: var(--blue950);
+    padding: 2rem;
 }
 
 .card {
@@ -30,7 +31,7 @@ body {
     flex-direction: column;
     gap: 1rem;
     background-color: var(--blue900);
-    padding: 1.5rem;
+    padding: clamp(1.25rem, 3.077vw + 0.635rem, 1.5rem);
     border-radius: 1rem;
     max-width: 24rem;
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
@@ -83,7 +84,7 @@ body {
 .card__heading {
     color: var(--white);
     font-weight: 600;
-    font-size: 24px;
+    font-size: clamp(1.313rem, 2.308vw + 0.851rem, 1.5rem);
     text-decoration: none;
     transition: color 250ms ease-out;
 }
@@ -96,7 +97,7 @@ body {
 .card__paragraph {
     color: var(--blue500);
     font-weight: 300;
-    font-size: 18px;
+    font-size: clamp(1rem, 1.538vw + 0.692rem, 1.125rem);
 }
 
 .card__info {
@@ -115,13 +116,13 @@ body {
 .card__price {
     color: var(--cyan400);
     font-weight: 600;
-    font-size: 16px;
+    font-size: clamp(0.875rem, 1.538vw + 0.567rem, 1rem);
 }
 
 .card__time {
     color: var(--blue500);
     font-weight: 400;
-    font-size: 16px;
+    font-size: clamp(0.875rem, 1.538vw + 0.567rem, 1rem);
 }
 
 .card__line {
@@ -134,7 +135,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-self: center;
-    gap: 1rem;
+    gap: clamp(0.75rem, 3.077vw + 0.135rem, 1rem);
 }
 
 .card__avatar {
@@ -146,7 +147,7 @@ body {
 .card__author {
     color: var(--blue500);
     font-weight: 400;
-    font-size: 16px;    
+    font-size: clamp(0.875rem, 1.538vw + 0.567rem, 1rem);    
 }
 
 .card__name {
@@ -161,7 +162,7 @@ body {
 }
 
 .attribution { 
-    font-size: 11px; 
+    font-size: clamp(0.625rem, 1.538vw + 0.317rem, 0.75rem);
     text-align: center; 
     color: var(--white);
 }
