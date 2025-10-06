@@ -33,8 +33,19 @@ body {
     padding: 1.5rem;
     border-radius: 1rem;
     max-width: 24rem;
-   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
     margin-block-end: 2rem;
+}
+
+.card__image-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 1rem;
 }
 
 .card__image {
@@ -42,10 +53,44 @@ body {
     border-radius: 1rem;
 }
 
+.card__image-overlay {
+    position: absolute;
+    background-color: var(--cyan400);
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    opacity: 50%;
+    z-index: 1;
+    transition: opacity 250ms ease;
+}
+
+.card__image-overlay.hidden {
+    opacity: 0;
+    transition: opacity 250ms ease-out;
+}
+
+.card__image-overlay-icon {
+    position: absolute;
+    z-index: 2;
+    transition: opacity 250ms ease;
+}
+
+.card__image-overlay-icon.hidden {
+    opacity: 0;
+    transition: opacity 250ms ease-out;
+}
+
 .card__heading {
     color: var(--white);
     font-weight: 600;
     font-size: 24px;
+    text-decoration: none;
+    transition: color 250ms ease-out;
+}
+
+.card__heading:hover {
+    color: var(--cyan400);
+    transition: color 250ms ease;
 }
 
 .card__paragraph {
@@ -79,6 +124,11 @@ body {
     font-size: 16px;
 }
 
+.card__line {
+    height: 1px;
+    background-color: var(--blue800);
+}
+
 .card__creator {
     display: flex;
     flex-direction: row;
@@ -101,6 +151,13 @@ body {
 
 .card__name {
     color: var(--white);
+    text-decoration: none;
+    transition: color 250ms ease-out;
+}
+
+.card__name:hover {
+    color: var(--cyan400);
+    transition: color 250ms ease;
 }
 
 .attribution { 
